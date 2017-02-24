@@ -20,7 +20,7 @@ socket.on('message', function(message) {
 	console.log(message.text);
 
 	$message.append('<p><strong>' + message.name + ' ' + moment.utc(message.timestamp).local().format('h:mm a') + '</strong></p>');
-	$message.append('<p>' + message.text + '</p>');
+	$message.append('<p> ' + message.text + '</p>');
 	$messages.append($message);
 });
 // Handles submitting of new message
