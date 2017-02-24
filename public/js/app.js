@@ -4,7 +4,11 @@ var room = getQueryVariable('room');
 socket.on('connect', function() {
 	console.log('Connected to socket.io server!');
 	console.log(name + ' joined room ' + room);
-
+	jQuery('.room-title').text(room);
+	socket.emit('joinRoom',{
+		name:name,
+		room:room
+	});
 
 });
 
